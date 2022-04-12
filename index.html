@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Send Request</title>
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.css" />
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <div class="container">
+      <h1 class="brand"><span>Company Name</span>Work</h1>
+      <div class="wrapper animated bounceInLeft">
+        <div class="company-info">
+          <h3>Company Details</h3>
+          <ul>
+            <li><i class="fa fa-road"></i>Company Adress</li>
+            <li><i class="fa fa-phone"></i>Company Contact Number</li>
+            <li><i class="fa fa-envelope"></i> company mail</li>
+          </ul>
+        </div>
+        <div class="contact">
+          <h3>Make a Request</h3>
+          <form method="POST" action="/sendemail" enctype="multipart/form-data">
+            <p>
+              <label>Requester Name</label>
+              <input type="text"name="name">
+            </p>
+  
+            <p>
+              <label>Request Type</label>
+              <select name="request" id="request">
+                <option value="">Please Select</option>
+    <option value="Letters">Letters</option>
+    <option value="Settlements">Settlements Reports</option>
+    <option value="technical">Technical Issues</option>
+    <option value="others">Others</option>
+    <option value=""></option>
+  </select>
+            </p>
+  
+            <p>
+              <label>Content Deadline</label>
+              <input type="date" name="deadline">
+            </p>
+  
+            <p>
+              <label>Content Subject</label>
+              <input type="text" name="subject">
+            </p>
+            <p>
+              <label>Email Address</label>
+              <input type="email" name="email">
+            </p>
+  
+            <p>
+              <label>Target Keywords</label>
+              <input type="text" name="keywords">
+            </p>
+  
+            <p>
+        
+              <label>Attachments</label>
+              <input type="file" name="image">
+              
+            </p>
+  
+            <p>
+              <label>Tasks/Steps</label>
+              <input type="text" name="tasks">
+            </p>
+  
+            <p class="full">
+              <label>Content Details</label>
+              <textarea name="details" rows="5"></textarea>
+            </p>
+            <p class="full">
+              <button type="submit">Request</button>
+            </p>
+          </form>
+        </div>
+      </div>
+    </div>
+</body>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+</html>
